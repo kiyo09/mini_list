@@ -1,0 +1,21 @@
+<ul class="cate1">
+  <% @parents.each do |parent|%>
+    <li class="parent__list">
+      <%= link_to "#{parent.name}" %>
+      </li>
+        <ul class="category2">
+          <% parent.children.each do |child| %>
+            <li class="child__list">
+              <%= link_to "#{child.name}" %>
+              </li>
+                <ul class="category3">
+                  <% child.children.each do |grandchild| %>
+                    <li class="grandchild__list">
+                      <%= link_to "#{grandchild.name}" %>
+                    </li>
+                </ul>
+         </ul>
+</ul>
+<%end%>
+<%end%>
+<%end%>
